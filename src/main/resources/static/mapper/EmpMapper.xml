@@ -174,7 +174,6 @@
              left outer join pstn_code on emp_table.job_code= pstn_code.job_code
 
         where emp_id = #{empId};
-
     </select>
 
     <update id="ConfirmPromotion">

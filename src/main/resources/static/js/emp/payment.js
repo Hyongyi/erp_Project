@@ -42,7 +42,7 @@ $(document).ready(function () {
 
             }
         });
-    });
+    }); //사원의 이름을 누를시 해당하는 사원의 급여명세서를 띄워줌
 
     $(document).on('click', '.searchMonth', function() {
 
@@ -97,7 +97,7 @@ $(document).ready(function () {
             }
         });
 
-    });
+    }); //급여 명세서 년도와 월의 조회 Ajax
 
     $('#payAll').click(function () {
         $.ajax({
@@ -113,7 +113,7 @@ $(document).ready(function () {
 
             }
         });
-    })
+    }) //일괄급여 이체를 해주는 Ajax
 });
 
 
@@ -142,68 +142,10 @@ function count(type) {
     $('#month').html(PayMonth)
     $('#year').html(PayYear)
 
-}
+} //월별 조회를 위해 월의 값을 바꾸어 주는 함수
 
 function addComma(value) {
     value = value.toLocaleString();
     return value;
-}
+} //1000 단위로 콤마 넣어주는 함수
 
-
-// $('#prevMonth').click(function () {
-//     i = i+1;
-//     if ()
-//         $('#noData').hide();
-//     $('#emNum').html(`${data[i].emp_id}`)
-//     $('#emName').html(`${data[i].emp_name}`)
-//     $('#hqNo').html(`${data[i].hq_name}`)
-//     $('#depNo').html(`${data[i].dep_name}`)
-//     $('#seriNo').html(`${data[i].serial_no}`)
-//     $('#tax').html(`${addComma(data[i].tax)}`)
-//     $('#wage').html(`${addComma(data[i].wage)}`)
-//     $('#actWage').html(`${addComma(data[i].wage + data[i].trn_exp + data[i].wel_exp + data[i].trn_exp + data[i].Meal_exp - data[i].tax)}`)
-//     $('#welEx').html(`${addComma(data[i].wel_exp)}`)
-//     $('#melEx').html(`${addComma(data[i].Meal_exp)}`)
-//     $('#trnEx').html(`${addComma(data[i].trn_exp)}`)
-//     $('#paydate').html(`${data[i].paymdate}`)
-//     let year = $('#paydate').html().slice(0,4);
-//     let month = $('#paydate').html().slice(5,7);
-//     $('#month').html(month);
-//     $('#year').html(year)
-// })
-
-
-// $('#nextMonth').click(function () {
-//     i = i-1;
-//     if (i < 0){
-//         $('#noData').show()
-//         $('#emNum').remove()
-//         $('#emName').remove()
-//         $('#hqNo').remove()
-//         $('#depNo').remove()
-//         $('#seriNo').remove()
-//         $('#tax').remove()
-//         $('#wage').remove()
-//         $('#actWage').remove()
-//         $('#welEx').remove()
-//         $('#melEx').remove()
-//         $('#trnEx').remove()
-//         $('#paydate').remove()
-//     }
-//     $('#emNum').html(`${data[i].emp_id}`)
-//     $('#emName').html(`${data[i].emp_name}`)
-//     $('#hqNo').html(`${data[i].hq_name}`)
-//     $('#depNo').html(`${data[i].dep_name}`)
-//     $('#seriNo').html(`${data[i].serial_no}`)
-//     $('#tax').html(`${addComma(data[i].tax)}`)
-//     $('#wage').html(`${addComma(data[i].wage)}`)
-//     $('#actWage').html(`${addComma(data[i].wage + data[i].trn_exp + data[i].wel_exp + data[i].trn_exp + data[i].Meal_exp - data[i].tax)}`)
-//     $('#welEx').html(`${addComma(data[i].wel_exp)}`)
-//     $('#melEx').html(`${addComma(data[i].Meal_exp)}`)
-//     $('#trnEx').html(`${addComma(data[i].trn_exp)}`)
-//     $('#paydate').html(`${data[i].paymdate}`)
-//     let year = $('#paydate').html().slice(0, 4);
-//     let month = $('#paydate').html().slice(5, 7);
-//     $('#month').html(month);
-//     $('#year').html(year)
-// })

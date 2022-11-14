@@ -3,7 +3,7 @@ $(document).ready(function () {
         order: [[0, 'desc']],
         ordering: true,
         serverSide: false
-    });
+    }); // 데이터테이블을 역순으로 정렬해주기
     $('#search').click(function () {
 
         let noticedata = {
@@ -44,6 +44,6 @@ $(document).ready(function () {
             }
         });
 
-    });
+    });  //공지사항 검색 필터 Ajax
 });
 

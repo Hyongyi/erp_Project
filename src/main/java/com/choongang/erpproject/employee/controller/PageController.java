@@ -17,11 +17,11 @@ public class PageController {
     @Autowired
     PromotionMapper promotionMapper;
 
-    @RequestMapping("/promo2")
-    private String promotionList() {
-//        model.addAttribute("promo", promotionMapper.selectProAll1());
-        return "/employee/employee_1";
-    }
+//    @RequestMapping("/promo2")
+//    private String promotionList() {
+////        model.addAttribute("promo", promotionMapper.selectProAll1());
+//        return "/employee/employee_1";
+//    }
 
     @GetMapping("/promo")
     private String promotionList2(Model model) {

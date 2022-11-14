@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
     $('#dataTable').DataTable({
         order: [[0, 'desc']],
@@ -62,5 +60,5 @@ $(document).ready(function () {
             $('#update').removeAttr("disabled");
         }
     })
-});
+}); //게시글 검색 필터 Ajax
 

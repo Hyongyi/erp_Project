@@ -1,6 +1,6 @@
 window.onload = () => {
     findEmpName();
-}
+} //페이지 로드시 로그인한 사람의 이름 가져오기
 
 $(document).ready(function () {
     $('#password').on("propertychange change paste input", function() {
@@ -19,7 +19,7 @@ $(document).ready(function () {
         }
     })
 
-});
+}); //게시글 비밀번호 입력시 자동으로 감지하여 비밀번호 대조
 // th:onclick="|location.href='@{/board/updateBoard(boardNum=${view.boardNum})}'|"
 
 function findEmpName() {
@@ -45,4 +45,4 @@ function findEmpName() {
         }
     });
 
-}
+}//글작성시 로그인한 사람의 이름 가져오는 ajax

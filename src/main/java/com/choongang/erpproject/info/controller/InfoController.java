@@ -61,7 +61,7 @@ public class InfoController {
 // 업로드하는 파일들을 MultipartFile 형태의 파라미터로 전달된다.
     public String upload(@RequestParam MultipartFile[] fileName, Model model, @RequestParam String title, @RequestParam String content)
             throws IllegalStateException, IOException {
-        if(fileName == null || fileName.length == 0) {
+        if(fileName == null || fileName.length == 0) { //파일 업로드할 자료가 있을시와 없을시 분기 처리
             noticeMapper.insertNoticeNoFile(title,content);
             List<NoticeDto> list = noticeMapper.selectNoticeList();
             model.addAttribute("info", list);

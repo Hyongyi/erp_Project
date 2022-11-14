@@ -31,7 +31,7 @@ $(document).ready(function () {
                 alert("데이터를 불러오는 도중에 오류가 발생하였습니다.")
             }
         });
-    });
+    }); //승진대상자의 정보를 띄워주는 Ajax
     $('#confirmFirst').click(function () {
 
         let proPosi = $('#proPosition').val();
@@ -48,7 +48,7 @@ $(document).ready(function () {
             $('#noInfo').hide()
             $("#sss").attr('id','send1');
         }
-    });
+    }); //승진 처리를 위한 Validation check
 
     $('#finalConfirm').click(function () {
         let emNum = $('.emNum').html();
@@ -82,7 +82,7 @@ $(document).ready(function () {
 
         });
 
-    });
+    }); //최종 승진 처리 Ajax
 
 
 });
@@ -94,9 +94,9 @@ function inputNumberFormat(obj) {
 function comma(str) {
     str = String(str);
     return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
-}
+} //1000단위 숫자의 콤마를 넣어주는 함수
 
 function uncomma(str) {
     str = String(str);
     return str.replace(/[^\d]+/g, '');
-}
+} //넣었던 콤마를 제거해주는 함수
